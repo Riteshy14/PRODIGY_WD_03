@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e272e; 
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f3640;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7); 
+  }
+  
+  .game-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #353b48;
+    border-radius: 20px;
+    width: 420px; 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .title {
+    font-size: 2.2em;
+    color: #00a8ff; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .cell {
+    width: 110px;
+    height: 110px;
+    background-color: #40739e; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .cell:hover {
+    background-color: #487eb0;
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .cell.x {
+    color: #3d3d3d; 
+  }
+  
+  .cell.o {
+    color: #2f3640; 
+  }
+  
+  .restart-btn {
+    padding: 12px 24px;
+    background-color: #00a8ff;
+    color: #353b48;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .restart-btn:hover {
+    background-color: #4cd137; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .win {
+    animation: glow 0.6s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      background-color: #e1b12c;
+    }
+    to {
+      background-color: #fbc531;
+    }
+  }
+  
+  body.win-x {
+    background-color: rgba(156, 136, 255, 0.2); 
+  }
+  
+  body.win-o {
+    background-color: rgba(251, 197, 49, 0.2); 
+  }
+  
